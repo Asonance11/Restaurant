@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'consolas', sans-serif;
+}
+nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	background: #555555;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.7);
+}
+nav ul li {
+	display: inline-block;
+	padding: 10px;
+	margin-left: 5px;
+	border: 1px solid #fff;
+	color: #fff;
+	cursor: pointer;
+}
+nav ul li:hover {
+	background-color: #444444;
+}
