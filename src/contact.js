@@ -20,6 +20,7 @@ let createForm = function () {
 	let send = document.createElement('button');
 	send.setAttribute('type', 'submit');
 	send.setAttribute('id', 'submit');
+	send.textContent = 'Send';
 
 	form.appendChild(name);
 	form.appendChild(message);
