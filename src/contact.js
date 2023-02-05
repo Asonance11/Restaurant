@@ -3,6 +3,8 @@ let content = document.getElementById('content');
 
 let createForm = function () {
 	const form = document.createElement('form');
+	let div = document.createElement('div');
+	div.setAttribute('id', 'form-div');
 	let name = document.createElement('input');
 	name.setAttribute('type', 'text');
 	name.setAttribute('placeholder', 'Name');
@@ -25,8 +27,8 @@ let createForm = function () {
 	form.appendChild(name);
 	form.appendChild(message);
 	form.appendChild(send);
-
-	return form;
+	div.appendChild(form);
+	return div;
 };
 
 export default createForm;
