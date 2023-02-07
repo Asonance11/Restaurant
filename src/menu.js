@@ -1,3 +1,6 @@
+import jollof from './jollof-rice.jpg';
+import pounded from './pounded-yam.jpg';
+import puff from './puff-puff.jpg';
 let createMenu = function () {
 	let menuContainer = document.createElement('div');
 	menuContainer.setAttribute('id', 'menu-container');
@@ -6,20 +9,27 @@ let createMenu = function () {
 		let imageArea = document.createElement('div');
 		let text = document.createElement('p');
 		if (i == 0) {
-			imageArea.style.background = `url(${jollof})`;
+			imageArea.style.backgroundImage = `url(${jollof})`;
+			imageArea.style.width = '150px';
 			text.textContent = 'Jollof Rice';
-			menuContainer.appendChild(imageArea);
+			menuItem.appendChild(imageArea);
 			menuItem.appendChild(text);
 		}
 		if (i == 1) {
+			imageArea.style.background = `url(${pounded})`;
 			text.textContent = 'Pounded Yam';
-			menuContainer.appendChild(imageArea);
+			menuItem.appendChild(imageArea);
 			menuItem.appendChild(text);
 		}
 		if (i == 2) {
+			imageArea.style.background = `url(${puff})`;
 			text.textContent = 'Puff Puff';
-			menuContainer.appendChild(imageArea);
+			menuItem.appendChild(imageArea);
 			menuItem.appendChild(text);
 		}
+		menuContainer.appendChild(menuItem);
 	}
+
+	return menuContainer;
 };
+export default createMenu;
