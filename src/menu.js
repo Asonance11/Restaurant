@@ -6,23 +6,26 @@ let createMenu = function () {
 	menuContainer.setAttribute('id', 'menu-container');
 	for (let i = 0; i < 3; i++) {
 		let menuItem = document.createElement('div');
-		let imageArea = document.createElement('div');
+		menuItem.setAttribute('id', 'menu-item');
+		let imageArea = document.createElement('img');
 		let text = document.createElement('p');
 		if (i == 0) {
-			imageArea.style.backgroundImage = `url(${jollof})`;
+			imageArea.src = `${jollof}`;
 			imageArea.style.width = '150px';
 			text.textContent = 'Jollof Rice';
 			menuItem.appendChild(imageArea);
 			menuItem.appendChild(text);
 		}
 		if (i == 1) {
-			imageArea.style.background = `url(${pounded})`;
+			imageArea.src = `${pounded}`;
+			imageArea.style.width = '150px';
 			text.textContent = 'Pounded Yam';
 			menuItem.appendChild(imageArea);
 			menuItem.appendChild(text);
 		}
 		if (i == 2) {
-			imageArea.style.background = `url(${puff})`;
+			imageArea.src = `${puff}`;
+			imageArea.style.width = '150px';
 			text.textContent = 'Puff Puff';
 			menuItem.appendChild(imageArea);
 			menuItem.appendChild(text);
